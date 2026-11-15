@@ -1,0 +1,201 @@
+.products-section {
+    width: min(1120px, calc(100% - 3rem));
+    margin: 0 auto;
+    padding: clamp(3rem, 8vw, 6rem) 0;
+    color: #F1F5F9;
+    font-family: Arial, sans-serif;
+}
+
+.products-builder-section {
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border-radius: 1.25rem;
+    background: #F1F5F9;
+    color: #101827;
+}
+
+.products-builder-heading {
+    max-width: 680px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.products-builder-eyebrow {
+    margin: 0 0 0.6rem;
+    color: #2563EB;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.products-builder-heading h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.products-builder-subtitle {
+    margin: 0.75rem 0 0;
+    color: #64748B;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.products-builder-group + .products-builder-group {
+    margin-top: 2rem;
+}
+
+.products-builder-group h3 {
+    margin: 0 0 0.9rem;
+    color: #334155;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.products-builder-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.products-builder-card {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 0.85rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px dashed #CBD5E1;
+    border-radius: 0.9rem;
+    background: #FFFFFF;
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.products-builder-card:hover,
+.products-builder-card:focus-within {
+    transform: translateY(-2px);
+    border-color: #2563EB;
+    box-shadow: 0 8px 18px rgb(16 24 39 / 8%);
+}
+
+.products-builder-icon-wrap {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border-radius: 0.75rem;
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.products-builder-icon {
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: contain;
+}
+
+.products-builder-field {
+    display: grid;
+    min-width: 0;
+    gap: 0.45rem;
+}
+
+.products-builder-field label {
+    color: #101827;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.products-builder-field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 0.55rem 0.65rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 0.6rem;
+    background: #F8FAFC;
+    color: #334155;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.82rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.products-builder-field select:focus {
+    border-color: #2563EB;
+    outline: none;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgb(37 99 235 / 14%);
+}
+
+.products-builder-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.products-builder-buy {
+    display: inline-flex;
+    min-width: 160px;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.65rem;
+    background: #2563EB;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.products-builder-buy:hover {
+    transform: translateY(-2px);
+    background: #1D4ED8;
+}
+
+.products-builder-buy:focus-visible {
+    outline: 3px solid #93B4FF;
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .products-builder-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .products-builder-section {
+        padding: 1.25rem 1rem;
+    }
+
+    .products-builder-heading {
+        margin-bottom: 2rem;
+    }
+
+    .products-builder-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .products-builder-card,
+    .products-builder-field select,
+    .products-builder-buy {
+        transition: none;
+    }
+
+    .products-builder-card:hover,
+    .products-builder-card:focus-within,
+    .products-builder-buy:hover {
+        transform: none;
+    }
+}

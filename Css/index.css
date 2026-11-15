@@ -1,0 +1,22 @@
+:root {
+    --color-midnight-navy: #061022;
+    --color-electric-blue: #2563EB;
+    --color-cool-white: #F1F5F9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-midnight-navy);
+    color: var(--color-cool-white);
+    font-family: Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
