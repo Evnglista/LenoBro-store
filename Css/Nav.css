@@ -83,22 +83,33 @@ nav li {
 
 @media (max-width: 560px) {
     nav {
-        padding: 0.5rem;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "brand cart"
+            "links links";
+        height: auto;
+        row-gap: 0.35rem;
+        padding: 0.65rem 0.8rem;
     }
 
     nav .nav-brand {
+        grid-area: brand;
         font-size: 1.05rem;
     }
 
     nav ul {
-        gap: 0.45rem;
+        grid-area: links;
+        justify-self: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 0.9rem;
     }
 
     nav a {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
 
     nav .nav-cart {
+        grid-area: cart;
         width: 2.2rem;
         height: 2.2rem;
     }

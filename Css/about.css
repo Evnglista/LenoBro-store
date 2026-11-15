@@ -49,16 +49,20 @@
 
 .about-mission-card,
 .about-feature-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: 1px solid rgb(255 255 255 / 55%);
     border-radius: 1rem;
     background: var(--about-light-gray);
     color: var(--about-navy);
+    text-align: center;
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .about-mission-card {
-    min-height: 235px;
-    padding: clamp(1.5rem, 4vw, 2.25rem);
+    min-height: 200px;
+    padding: clamp(1.25rem, 3.2vw, 1.8rem);
 }
 
 .about-mission-card:hover,
@@ -67,33 +71,18 @@
     box-shadow: 0 16px 32px rgb(0 0 0 / 22%);
 }
 
-.about-icon {
-    display: grid;
-    width: 3rem;
-    height: 3rem;
-    margin-bottom: 1.2rem;
-    place-items: center;
-    border-radius: 0.85rem;
-    background: rgb(37 99 235 / 12%);
-    color: var(--about-blue);
-}
-
-.about-icon svg {
-    display: block;
-    width: 1.6rem;
-    height: 1.6rem;
-}
-
 .about-mission-card h3,
 .about-feature-card h3 {
     margin: 0 0 0.65rem;
+    color: var(--about-blue);
     font-size: 1.25rem;
     line-height: 1.3;
 }
 
 .about-mission-card p,
 .about-feature-card p {
-    margin: 0;
+    max-width: 38ch;
+    margin: 0 auto;
     color: var(--about-muted);
     font-size: 1rem;
     line-height: 1.65;
@@ -107,8 +96,8 @@
 }
 
 .about-feature-card {
-    min-height: 215px;
-    padding: 1.75rem;
+    min-height: 185px;
+    padding: 1.5rem;
 }
 
 @media (max-width: 720px) {
