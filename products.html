@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | LenoBro</title>
+    <link rel="stylesheet" href="Css/Nav.css">
+    <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="Css/products.css">
+    <link rel="stylesheet" href="Css/footer.css">
+</head>
+<body>
+    <nav>
+        <span class="nav-brand">LenoBro</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-cart" type="button" aria-label="Shopping cart">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L21 9H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10" cy="20" r="1" fill="currentColor"/>
+                <circle cx="18" cy="20" r="1" fill="currentColor"/>
+            </svg>
+            <span class="cart-count" aria-label="0 items">0</span>
+        </button>
+    </nav>
+
+    <main>
+        <section class="products-section" id="products" aria-labelledby="products-builder-title">
+            <div class="products-builder-section">
+                <header class="products-builder-heading">
+                    <p class="products-builder-eyebrow">Customize your setup</p>
+                    <h1 id="products-builder-title">Build Your Own PC</h1>
+                    <p class="products-builder-subtitle">Choose your components and customize your perfect PC.</p>
+                </header>
+
+                <section class="products-builder-group" aria-labelledby="products-builder-core-title">
+                    <h2 id="products-builder-core-title">Core Components</h2>
+                    <div class="products-builder-grid">
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/cpu.png" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-cpu">Processor (CPU)</label>
+                                <select id="products-builder-cpu">
+                                    <option selected>+ Select Processor (CPU)</option>
+                                    <option>AMD Ryzen 5 7600 — ₱12,500</option>
+                                    <option>AMD Ryzen 7 7800X3D — ₱24,500</option>
+                                    <option>Intel Core i5-14600K — ₱20,000</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/gpu.jpg" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-gpu">Graphics Card (GPU)</label>
+                                <select id="products-builder-gpu">
+                                    <option selected>+ Select Graphics Card (GPU)</option>
+                                    <option>NVIDIA GeForce RTX 4060 — ₱20,500</option>
+                                    <option>NVIDIA GeForce RTX 4070 SUPER — ₱39,500</option>
+                                    <option>AMD Radeon RX 7800 XT — ₱32,500</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/motherboard.jpg" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-motherboard">Motherboard</label>
+                                <select id="products-builder-motherboard">
+                                    <option selected>+ Select Motherboard</option>
+                                    <option>AMD AM5 ATX Motherboard — ₱11,500</option>
+                                    <option>AMD AM5 Micro-ATX Motherboard — ₱9,500</option>
+                                    <option>Intel LGA1700 ATX Motherboard — ₱10,500</option>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="products-builder-group" aria-labelledby="products-builder-memory-title">
+                    <h2 id="products-builder-memory-title">Memory &amp; Storage</h2>
+                    <div class="products-builder-grid">
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/ram.jpg" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-ram">Memory (RAM)</label>
+                                <select id="products-builder-ram">
+                                    <option selected>+ Select Memory (RAM)</option>
+                                    <option>16GB (2 x 8GB) DDR5 — ₱3,800</option>
+                                    <option>32GB (2 x 16GB) DDR5 — ₱7,200</option>
+                                    <option>32GB (2 x 16GB) DDR4 — ₱5,500</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/ssd.jpg" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-nvme">SSD (NVMe)</label>
+                                <select id="products-builder-nvme">
+                                    <option selected>+ Select SSD (NVMe)</option>
+                                    <option>1TB PCIe Gen 4 NVMe SSD — ₱4,500</option>
+                                    <option>2TB PCIe Gen 4 NVMe SSD — ₱8,500</option>
+                                    <option>1TB PCIe Gen 5 NVMe SSD — ₱6,500</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/ssd%20sata.webp" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-sata">SSD (SATA)</label>
+                                <select id="products-builder-sata">
+                                    <option selected>+ Select SSD (SATA)</option>
+                                    <option>1TB SATA III SSD — ₱2,800</option>
+                                    <option>2TB SATA III SSD — ₱5,200</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/hdd.jpg" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-hdd">Hard Disk (HDD)</label>
+                                <select id="products-builder-hdd">
+                                    <option selected>+ Select Hard Disk (HDD)</option>
+                                    <option>2TB 7200RPM HDD — ₱3,200</option>
+                                    <option>4TB 7200RPM HDD — ₱5,800</option>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="products-builder-group" aria-labelledby="products-builder-other-title">
+                    <h2 id="products-builder-other-title">Other Components</h2>
+                    <div class="products-builder-grid">
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/psu.png" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-psu">Power Supply (PSU)</label>
+                                <select id="products-builder-psu">
+                                    <option selected>+ Select Power Supply (PSU)</option>
+                                    <option>650W 80+ Bronze PSU — ₱3,200</option>
+                                    <option>750W 80+ Gold PSU — ₱5,500</option>
+                                    <option>850W 80+ Gold PSU — ₱7,200</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/pc%20case.jpg" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-case">PC Case</label>
+                                <select id="products-builder-case">
+                                    <option selected>+ Select PC Case</option>
+                                    <option>ATX Mid Tower Case — ₱3,500</option>
+                                    <option>Compact Micro-ATX Case — ₱2,800</option>
+                                    <option>Panoramic Mid Tower Case — ₱6,500</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/cpu%20cooler.jpg" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-cooler">CPU Cooler</label>
+                                <select id="products-builder-cooler">
+                                    <option selected>+ Select CPU Cooler</option>
+                                    <option>120mm Tower Air Cooler — ₱1,800</option>
+                                    <option>Dual Tower Air Cooler — ₱3,500</option>
+                                    <option>240mm AIO Liquid Cooler — ₱6,800</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="products-builder-card">
+                            <span class="products-builder-icon-wrap" aria-hidden="true">
+                                <img class="products-builder-icon" src="images/Product_Images/case%20fan.webp" alt="">
+                            </span>
+                            <div class="products-builder-field">
+                                <label for="products-builder-fans">Case Fans</label>
+                                <select id="products-builder-fans">
+                                    <option selected>+ Select Case Fans</option>
+                                    <option>3 x 120mm PWM Fan Pack — ₱1,200</option>
+                                    <option>3 x 140mm PWM Fan Pack — ₱1,600</option>
+                                    <option>3 x 120mm RGB Fan Pack — ₱2,200</option>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <div class="products-builder-actions">
+                    <span class="products-selection-total" aria-live="polite">Select a component</span>
+                    <button class="products-builder-buy" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contact-footer">
+        <p>© 2026 LenoBro™. All rights reserved.</p>
+    </footer>
+
+    <script>
+        (() => {
+            const currency = new Intl.NumberFormat("en-PH", {
+                style: "currency",
+                currency: "PHP",
+                maximumFractionDigits: 0
+            });
+
+            const readCart = () => {
+                try {
+                    return JSON.parse(localStorage.getItem("lenobro-cart") || "[]");
+                } catch {
+                    return [];
+                }
+            };
+
+            const saveCart = cart => {
+                localStorage.setItem("lenobro-cart", JSON.stringify(cart));
+                renderCart();
+            };
+
+            const cartIcon = document.querySelector(".nav-cart");
+            const cartCount = document.querySelector(".cart-count");
+            const addButton = document.querySelector(".products-builder-buy");
+            const selectionTotal = document.querySelector(".products-selection-total");
+            const selects = [...document.querySelectorAll(".products-builder-field select")];
+
+            const overlay = document.createElement("div");
+            overlay.className = "cart-overlay";
+            const panel = document.createElement("aside");
+            panel.className = "cart-panel";
+            panel.setAttribute("aria-label", "Shopping cart");
+            panel.innerHTML = `
+                <header class="cart-header">
+                    <h2>Shopping Cart</h2>
+                    <button class="cart-close" type="button" aria-label="Close cart">×</button>
+                </header>
+                <div class="cart-items"></div>
+                <footer class="cart-footer">
+                    <div><span class="cart-total-label">Total</span><strong class="cart-total">₱0</strong></div>
+                    <button class="cart-buy" type="button">Buy</button>
+                </footer>
+            `;
+            const checkout = document.createElement("section");
+            checkout.className = "checkout-dialog";
+            checkout.setAttribute("aria-label", "Order summary");
+            checkout.innerHTML = `
+                <h2>Order Summary</h2>
+                <ul class="checkout-list"></ul>
+                <strong class="checkout-total"></strong>
+                <div class="checkout-actions">
+                    <button class="cart-confirm-close" type="button">Close</button>
+                    <button class="checkout-confirm" type="button">Confirm Purchase</button>
+                </div>
+            `;
+            const toast = document.createElement("div");
+            toast.className = "cart-toast";
+            document.body.append(overlay, panel, checkout, toast);
+
+            const parsePrice = optionText => {
+                const match = optionText.match(/₱([\d,]+)/);
+                return match ? Number(match[1].replace(/,/g, "")) : 0;
+            };
+
+            const updateSelection = () => {
+                let total = 0;
+                let count = 0;
+
+                selects.forEach(select => {
+                    const card = select.closest(".products-builder-card");
+                    const option = select.options[select.selectedIndex];
+                    const selected = option && !option.textContent.trim().startsWith("+");
+                    card.classList.toggle("is-selected", Boolean(selected));
+                    if (selected) {
+                        total += parsePrice(option.textContent);
+                        count += 1;
+                    }
+                });
+
+                selectionTotal.textContent = count
+                    ? `${count} selected • ${currency.format(total)}`
+                    : "Select a component";
+            };
+
+            selects.forEach(select => select.addEventListener("change", updateSelection));
+
+            const closeCart = () => {
+                overlay.classList.remove("is-open");
+                panel.classList.remove("is-open");
+            };
+
+            function renderCart() {
+                const cart = readCart();
+                const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+                const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                cartCount.textContent = itemCount;
+                cartCount.setAttribute("aria-label", `${itemCount} items`);
+                panel.querySelector(".cart-total").textContent = currency.format(total);
+                panel.querySelector(".cart-buy").disabled = cart.length === 0;
+                panel.querySelector(".cart-items").innerHTML = cart.length
+                    ? cart.map(item => `
+                        <article class="cart-item" data-key="${item.key}">
+                            <img src="${item.image}" alt="">
+                            <div>
+                                <p class="cart-item-name">${item.name}</p>
+                                <p class="cart-item-price">${currency.format(item.price)}</p>
+                            </div>
+                            <div class="cart-item-controls">
+                                <div class="cart-quantity">
+                                    <button type="button" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <span>${item.quantity}</span>
+                                    <button type="button" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button class="cart-remove" type="button" data-action="remove">Remove</button>
+                            </div>
+                        </article>
+                    `).join("")
+                    : '<p class="cart-empty">Your cart is empty.</p>';
+            }
+
+            addButton.addEventListener("click", () => {
+                const cart = readCart();
+                let added = 0;
+
+                selects.forEach(select => {
+                    const option = select.options[select.selectedIndex];
+                    if (!option || option.textContent.trim().startsWith("+")) return;
+
+                    const card = select.closest(".products-builder-card");
+                    const name = option.textContent.replace(/\s+[—-]\s*₱[\d,]+$/, "").trim();
+                    const key = `${select.id}:${name}`;
+                    const item = {
+                        key,
+                        name,
+                        price: parsePrice(option.textContent),
+                        image: card.querySelector("img").src,
+                        quantity: 1
+                    };
+
+                    const existing = cart.find(cartItem => cartItem.key === key);
+                    if (existing) existing.quantity += 1;
+                    else cart.push(item);
+                    added += 1;
+                });
+
+                if (!added) {
+                    toast.textContent = "Please select at least one component.";
+                } else {
+                    toast.textContent = `${added} component${added === 1 ? "" : "s"} added to cart`;
+                }
+
+                saveCart(cart);
+                toast.classList.add("is-visible");
+                window.clearTimeout(toast.hideTimer);
+                toast.hideTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 2200);
+            });
+
+            cartIcon.addEventListener("click", () => {
+                renderCart();
+                overlay.classList.add("is-open");
+                panel.classList.add("is-open");
+            });
+            panel.querySelector(".cart-close").addEventListener("click", closeCart);
+            overlay.addEventListener("click", closeCart);
+
+            panel.querySelector(".cart-items").addEventListener("click", event => {
+                const button = event.target.closest("[data-action]");
+                const itemElement = event.target.closest(".cart-item");
+                if (!button || !itemElement) return;
+                const cart = readCart();
+                const index = cart.findIndex(item => item.key === itemElement.dataset.key);
+                if (index < 0) return;
+                if (button.dataset.action === "increase") cart[index].quantity += 1;
+                if (button.dataset.action === "decrease") {
+                    cart[index].quantity -= 1;
+                    if (cart[index].quantity < 1) cart.splice(index, 1);
+                }
+                if (button.dataset.action === "remove") cart.splice(index, 1);
+                saveCart(cart);
+            });
+
+            panel.querySelector(".cart-buy").addEventListener("click", () => {
+                const cart = readCart();
+                if (!cart.length) return;
+                checkout.querySelector(".checkout-list").innerHTML = cart.map(item =>
+                    `<li><span>${item.name} × ${item.quantity}</span><strong>${currency.format(item.price * item.quantity)}</strong></li>`
+                ).join("");
+                const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                checkout.querySelector(".checkout-total").textContent = `Final total: ${currency.format(total)}`;
+                checkout.classList.add("is-open");
+                overlay.classList.add("is-open");
+            });
+            checkout.querySelector(".cart-confirm-close").addEventListener("click", () => {
+                checkout.classList.remove("is-open");
+                closeCart();
+            });
+            checkout.querySelector(".checkout-confirm").addEventListener("click", () => {
+                if (!readCart().length) return;
+                saveCart([]);
+                checkout.classList.remove("is-open");
+                closeCart();
+                toast.textContent = "Thank you! Your order has been confirmed.";
+                toast.classList.add("is-visible");
+                window.setTimeout(() => toast.classList.remove("is-visible"), 2200);
+            });
+
+            updateSelection();
+            renderCart();
+        })();
+    </script>
+</body>
+</html>

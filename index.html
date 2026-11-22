@@ -16,10 +16,10 @@
     <nav>
         <span class="nav-brand">LenoBro</span>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-mission">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <button class="nav-cart" type="button" aria-label="Shopping cart">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -27,6 +27,7 @@
                 <circle cx="10" cy="20" r="1" fill="currentColor"/>
                 <circle cx="18" cy="20" r="1" fill="currentColor"/>
             </svg>
+            <span class="cart-count" aria-label="0 items">0</span>
         </button>
     </nav>
 
@@ -43,8 +44,8 @@
                     reliability, and endless possibilities.
                 </p>
                 <div class="hero-buttons">
-                    <a class="btn-primary" href="#products">Explore Products</a>
-                    <a class="btn-secondary" href="#about-mission">Learn More</a>
+                    <a class="btn-primary" href="products.html">Explore Products</a>
+                    <a class="btn-secondary" href="about.html">Learn More</a>
                 </div>
             </div>
 
@@ -53,324 +54,154 @@
             </div>
         </section>
 
-        <div class="about-page">
-            <section class="about-mission" id="about-mission" aria-labelledby="about-mission-title">
-                <div class="about-section-heading">
-                    <p class="about-eyebrow">Mission and Vision</p>
-                    <h2 id="about-mission-title">What drives LenoBro</h2>
-                </div>
-
-                <div class="about-mission-grid">
-                    <article class="about-mission-card">
-                        <h3>Our Mission</h3>
-                        <p>To provide affordable, reliable, and quality computer components that meet our customers' needs.</p>
-                    </article>
-
-                    <article class="about-mission-card">
-                        <h3>Our Vision</h3>
-                        <p>To become a trusted destination for computer hardware and technology solutions.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="about-features" aria-labelledby="about-features-title">
-                <div class="about-section-heading">
-                    <p class="about-eyebrow">Why Choose Us?</p>
-                    <h2 id="about-features-title">Built around what matters</h2>
-                </div>
-
-                <div class="about-features-grid">
-                    <article class="about-feature-card">
-                        <h3>Quality Products</h3>
-                        <p>Reliable computer components from trusted brands.</p>
-                    </article>
-
-                    <article class="about-feature-card">
-                        <h3>Affordable Prices</h3>
-                        <p>Products that offer great value for your money.</p>
-                    </article>
-
-                    <article class="about-feature-card">
-                        <h3>Customer Support</h3>
-                        <p>Helpful assistance when choosing PC components.</p>
-                    </article>
-                </div>
-            </section>
-        </div>
-
-        <section class="products-section" id="products" aria-labelledby="products-builder-title">
-            <div class="products-builder-section">
-                <header class="products-builder-heading">
-                    <p class="products-builder-eyebrow">Customize your setup</p>
-                    <h2 id="products-builder-title">Build Your Own PC</h2>
-                    <p class="products-builder-subtitle">Choose your components and customize your perfect PC.</p>
-                </header>
-
-                <section class="products-builder-group" aria-labelledby="products-builder-core-title">
-                    <h3 id="products-builder-core-title">Core Components</h3>
-                    <div class="products-builder-grid">
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/cpu.png" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-cpu">Processor (CPU)</label>
-                                <select id="products-builder-cpu">
-                                    <option selected>+ Select Processor (CPU)</option>
-                                    <option>AMD Ryzen 5 7600</option>
-                                    <option>AMD Ryzen 7 7800X3D</option>
-                                    <option>Intel Core i5-14600K</option>
-                                </select>
-                            </div>
-                        </article>
-
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/gpu.jpg" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-gpu">Graphics Card (GPU)</label>
-                                <select id="products-builder-gpu">
-                                    <option selected>+ Select Graphics Card (GPU)</option>
-                                    <option>NVIDIA GeForce RTX 4060</option>
-                                    <option>NVIDIA GeForce RTX 4070 SUPER</option>
-                                    <option>AMD Radeon RX 7800 XT</option>
-                                </select>
-                            </div>
-                        </article>
-
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/motherboard.jpg" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-motherboard">Motherboard</label>
-                                <select id="products-builder-motherboard">
-                                    <option>+ Select Motherboard</option>
-                                    <option>AMD AM5 ATX Motherboard</option>
-                                    <option selected>AMD AM5 Micro-ATX Motherboard</option>
-                                    <option>Intel LGA1700 ATX Motherboard</option>
-                                </select>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="products-builder-group" aria-labelledby="products-builder-memory-title">
-                    <h3 id="products-builder-memory-title">Memory &amp; Storage</h3>
-                    <div class="products-builder-grid">
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/ram.jpg" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-ram">Memory (RAM)</label>
-                                <select id="products-builder-ram">
-                                    <option>+ Select Memory (RAM)</option>
-                                    <option>16GB (2 x 8GB) DDR5</option>
-                                    <option>32GB (2 x 16GB) DDR5</option>
-                                    <option selected>32GB (2 x 16GB) DDR4</option>
-                                </select>
-                            </div>
-                        </article>
-
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/ssd.jpg" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-nvme">SSD (NVMe)</label>
-                                <select id="products-builder-nvme">
-                                    <option>+ Select SSD (NVMe)</option>
-                                    <option>1TB PCIe Gen 4 NVMe SSD</option>
-                                    <option>2TB PCIe Gen 4 NVMe SSD</option>
-                                    <option selected>1TB PCIe Gen 5 NVMe SSD</option>
-                                </select>
-                            </div>
-                        </article>
-
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/ssd%20sata.webp" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-sata">SSD (SATA)</label>
-                                <select id="products-builder-sata">
-                                    <option>+ Select SSD (SATA)</option>
-                                    <option>1TB SATA III SSD</option>
-                                    <option selected>2TB SATA III SSD</option>
-                                </select>
-                            </div>
-                        </article>
-
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/hdd.jpg" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-hdd">Hard Disk (HDD)</label>
-                                <select id="products-builder-hdd">
-                                    <option selected>+ Select Hard Disk (HDD)</option>
-                                    <option>2TB 7200RPM HDD</option>
-                                    <option>4TB 7200RPM HDD</option>
-                                </select>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="products-builder-group" aria-labelledby="products-builder-other-title">
-                    <h3 id="products-builder-other-title">Other Components</h3>
-                    <div class="products-builder-grid">
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/psu.png" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-psu">Power Supply (PSU)</label>
-                                <select id="products-builder-psu">
-                                    <option selected>+ Select Power Supply (PSU)</option>
-                                    <option>650W 80+ Bronze PSU</option>
-                                    <option>750W 80+ Gold PSU</option>
-                                    <option>850W 80+ Gold PSU</option>
-                                </select>
-                            </div>
-                        </article>
-
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/pc%20case.jpg" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-case">PC Case</label>
-                                <select id="products-builder-case">
-                                    <option selected>+ Select PC Case</option>
-                                    <option>ATX Mid Tower Case</option>
-                                    <option>Compact Micro-ATX Case</option>
-                                    <option>Panoramic Mid Tower Case</option>
-                                </select>
-                            </div>
-                        </article>
-
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/cpu%20cooler.jpg" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-cooler">CPU Cooler</label>
-                                <select id="products-builder-cooler">
-                                    <option selected>+ Select CPU Cooler</option>
-                                    <option>120mm Tower Air Cooler</option>
-                                    <option>Dual Tower Air Cooler</option>
-                                    <option>240mm AIO Liquid Cooler</option>
-                                </select>
-                            </div>
-                        </article>
-
-                        <article class="products-builder-card">
-                            <span class="products-builder-icon-wrap" aria-hidden="true">
-                                <img class="products-builder-icon" src="images/Product_Images/case%20fan.webp" alt="">
-                            </span>
-                            <div class="products-builder-field">
-                                <label for="products-builder-fans">Case Fans</label>
-                                <select id="products-builder-fans">
-                                    <option selected>+ Select Case Fans</option>
-                                    <option>3 x 120mm PWM Fan Pack</option>
-                                    <option>3 x 140mm PWM Fan Pack</option>
-                                    <option>3 x 120mm RGB Fan Pack</option>
-                                </select>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                <div class="products-builder-actions">
-                    <a class="products-builder-buy" href="#contact">Buy Now</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact" aria-labelledby="contact-title">
-            <div class="contact-container">
-                <header class="contact-heading">
-                    <p class="contact-eyebrow">Contact LenoBro</p>
-                    <h2 id="contact-title">Get in Touch</h2>
-                    <p>Have questions about PC components or need help building your dream PC? We'd love to hear from you.</p>
-                </header>
-
-                <div class="contact-main-grid">
-                    <section class="contact-information" aria-labelledby="contact-information-title">
-                        <h3 id="contact-information-title">Contact Information</h3>
-                        <div class="contact-details-grid">
-                            <article class="contact-detail-card">
-                                <span class="contact-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none">
-                                        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
-                                        <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                                <div>
-                                    <h4>Email</h4>
-                                    <p><a href="mailto:support@techforge.com">support@LenoBro.com</a></p>
-                                </div>
-                            </article>
-
-                            <article class="contact-detail-card">
-                                <span class="contact-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 3h3l1.5 4-2 1.5a15 15 0 0 0 6 6l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C11.3 19 5 12.7 5 5c0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                                <div>
-                                    <h4>Phone</h4>
-                                    <p><a href="tel:+639123456789">+63 912 345 6789</a></p>
-                                </div>
-                            </article>
-
-                            <article class="contact-detail-card">
-                                <span class="contact-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
-                                        <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                                <div>
-                                    <h4>Business Hours</h4>
-                                    <p>Monday to Saturday<br>9:00 AM – 6:00 PM</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="contact-form-panel" aria-labelledby="contact-form-title">
-                        <h3 id="contact-form-title">Send us a message</h3>
-                        <form class="contact-form" action="mailto:support@techforge.com" method="post" enctype="text/plain">
-                            <div class="contact-form-row">
-                                <div class="contact-form-field">
-                                    <label for="contact-name">Full Name</label>
-                                    <input id="contact-name" name="Full Name" type="text" placeholder="Your name" autocomplete="name" required>
-                                </div>
-                                <div class="contact-form-field">
-                                    <label for="contact-email">Email Address</label>
-                                    <input id="contact-email" name="Email Address" type="email" placeholder="you@example.com" autocomplete="email" required>
-                                </div>
-                            </div>
-                            <div class="contact-form-field">
-                                <label for="contact-subject">Subject</label>
-                                <input id="contact-subject" name="Subject" type="text" placeholder="How can we help?" required>
-                            </div>
-                            <div class="contact-form-field">
-                                <label for="contact-message">Message</label>
-                                <textarea id="contact-message" name="Message" rows="5" placeholder="Tell us what you need..." required></textarea>
-                            </div>
-                            <button class="contact-submit" type="submit">Send Message</button>
-                        </form>
-                    </section>
-                </div>
-            </div>
-        </section>
     </main>
     <footer class="contact-footer">
         <p>© 2026 LenoBro™. All rights reserved.</p>
     </footer>
+
+    <script>
+        (() => {
+            const currency = new Intl.NumberFormat("en-PH", {
+                style: "currency",
+                currency: "PHP",
+                maximumFractionDigits: 0
+            });
+
+            const cartIcon = document.querySelector(".nav-cart");
+            const cartCount = document.querySelector(".cart-count");
+
+            const overlay = document.createElement("div");
+            overlay.className = "cart-overlay";
+            const panel = document.createElement("aside");
+            panel.className = "cart-panel";
+            panel.setAttribute("aria-label", "Shopping cart");
+            panel.innerHTML = `
+                <header class="cart-header">
+                    <h2>Shopping Cart</h2>
+                    <button class="cart-close" type="button" aria-label="Close cart">×</button>
+                </header>
+                <div class="cart-items"></div>
+                <footer class="cart-footer">
+                    <div><span class="cart-total-label">Total</span><strong class="cart-total">₱0</strong></div>
+                    <button class="cart-buy" type="button">Buy</button>
+                </footer>
+            `;
+            document.body.append(overlay, panel);
+            const checkout = document.createElement("section");
+            checkout.className = "checkout-dialog";
+            checkout.setAttribute("aria-label", "Order summary");
+            checkout.innerHTML = `
+                <h2>Order Summary</h2>
+                <ul class="checkout-list"></ul>
+                <strong class="checkout-total"></strong>
+                <div class="checkout-actions">
+                    <button class="cart-confirm-close" type="button">Close</button>
+                    <button class="checkout-confirm" type="button">Confirm Purchase</button>
+                </div>
+            `;
+            document.body.append(checkout);
+
+            const readCart = () => {
+                try {
+                    return JSON.parse(localStorage.getItem("lenobro-cart") || "[]");
+                } catch {
+                    return [];
+                }
+            };
+
+            const saveCart = cart => {
+                localStorage.setItem("lenobro-cart", JSON.stringify(cart));
+                renderCart();
+            };
+
+            const closeCart = () => {
+                overlay.classList.remove("is-open");
+                panel.classList.remove("is-open");
+            };
+
+            const renderCart = () => {
+                const cart = readCart();
+                const quantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+                const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                cartCount.textContent = quantity;
+                cartCount.setAttribute("aria-label", `${quantity} items`);
+                panel.querySelector(".cart-total").textContent = currency.format(total);
+                panel.querySelector(".cart-buy").disabled = cart.length === 0;
+
+                const items = panel.querySelector(".cart-items");
+                items.innerHTML = cart.length
+                    ? cart.map(item => `
+                        <article class="cart-item" data-key="${item.key}">
+                            <img src="${item.image}" alt="">
+                            <div>
+                                <p class="cart-item-name">${item.name}</p>
+                                <p class="cart-item-price">${currency.format(item.price)}</p>
+                            </div>
+                            <div class="cart-item-controls">
+                                <div class="cart-quantity">
+                                    <button type="button" data-action="decrease" aria-label="Decrease quantity">−</button>
+                                    <span>${item.quantity}</span>
+                                    <button type="button" data-action="increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <button class="cart-remove" type="button" data-action="remove">Remove</button>
+                            </div>
+                        </article>
+                    `).join("")
+                    : '<p class="cart-empty">Your cart is empty.</p>';
+            };
+
+            cartIcon.addEventListener("click", () => {
+                overlay.classList.add("is-open");
+                panel.classList.add("is-open");
+                renderCart();
+            });
+            panel.querySelector(".cart-close").addEventListener("click", closeCart);
+            overlay.addEventListener("click", closeCart);
+            panel.querySelector(".cart-buy").addEventListener("click", () => {
+                const cart = readCart();
+                if (!cart.length) return;
+                checkout.querySelector(".checkout-list").innerHTML = cart.map(item =>
+                    `<li><span>${item.name} × ${item.quantity}</span><strong>${currency.format(item.price * item.quantity)}</strong></li>`
+                ).join("");
+                const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                checkout.querySelector(".checkout-total").textContent = `Final total: ${currency.format(total)}`;
+                checkout.classList.add("is-open");
+                overlay.classList.add("is-open");
+            });
+            checkout.querySelector(".cart-confirm-close").addEventListener("click", () => {
+                checkout.classList.remove("is-open");
+                closeCart();
+            });
+            checkout.querySelector(".checkout-confirm").addEventListener("click", () => {
+                if (!readCart().length) return;
+                saveCart([]);
+                checkout.classList.remove("is-open");
+                closeCart();
+                alert("Thank you! Your order has been confirmed.");
+            });
+
+            panel.querySelector(".cart-items").addEventListener("click", event => {
+                const button = event.target.closest("[data-action]");
+                const itemElement = event.target.closest(".cart-item");
+                if (!button || !itemElement) return;
+                const cart = readCart();
+                const index = cart.findIndex(item => item.key === itemElement.dataset.key);
+                if (index < 0) return;
+                if (button.dataset.action === "increase") cart[index].quantity += 1;
+                if (button.dataset.action === "decrease") {
+                    cart[index].quantity -= 1;
+                    if (cart[index].quantity < 1) cart.splice(index, 1);
+                }
+                if (button.dataset.action === "remove") cart.splice(index, 1);
+                saveCart(cart);
+            });
+
+            renderCart();
+            if (location.hash === "#cart") {
+                overlay.classList.add("is-open");
+                panel.classList.add("is-open");
+            }
+        })();
+    </script>
 </body>
 </html>

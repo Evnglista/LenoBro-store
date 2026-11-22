@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | LenoBro</title>
+    <link rel="stylesheet" href="Css/Nav.css">
+    <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="Css/about.css">
+    <link rel="stylesheet" href="Css/footer.css">
+</head>
+<body>
+    <nav>
+        <span class="nav-brand">LenoBro</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-cart" type="button" aria-label="Shopping cart">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L21 9H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10" cy="20" r="1" fill="currentColor"/>
+                <circle cx="18" cy="20" r="1" fill="currentColor"/>
+            </svg>
+            <span class="cart-count" aria-label="0 items">0</span>
+        </button>
+    </nav>
+
+    <main>
+        <div class="about-page">
+            <section class="about-mission" id="about-mission" aria-labelledby="about-mission-title">
+                <div class="about-section-heading">
+                    <p class="about-eyebrow">Mission and Vision</p>
+                    <h1 id="about-mission-title">What drives LenoBro</h1>
+                </div>
+
+                <div class="about-mission-grid">
+                    <article class="about-mission-card">
+                        <h2>Our Mission</h2>
+                        <p>To provide affordable, reliable, and quality computer components that meet our customers' needs.</p>
+                    </article>
+
+                    <article class="about-mission-card">
+                        <h2>Our Vision</h2>
+                        <p>To become a trusted destination for computer hardware and technology solutions.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="about-features" aria-labelledby="about-features-title">
+                <div class="about-section-heading">
+                    <p class="about-eyebrow">Why Choose Us?</p>
+                    <h2 id="about-features-title">Built around what matters</h2>
+                </div>
+
+                <div class="about-features-grid">
+                    <article class="about-feature-card">
+                        <h3>Quality Products</h3>
+                        <p>Reliable computer components from trusted brands.</p>
+                    </article>
+
+                    <article class="about-feature-card">
+                        <h3>Affordable Prices</h3>
+                        <p>Products that offer great value for your money.</p>
+                    </article>
+
+                    <article class="about-feature-card">
+                        <h3>Customer Support</h3>
+                        <p>Helpful assistance when choosing PC components.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="contact-footer">
+        <p>© 2026 LenoBro™. All rights reserved.</p>
+    </footer>
+    <script>
+        (() => {
+            const cart = JSON.parse(localStorage.getItem("lenobro-cart") || "[]");
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const badge = document.querySelector(".cart-count");
+            badge.textContent = count;
+            badge.setAttribute("aria-label", `${count} items`);
+            document.querySelector(".nav-cart").addEventListener("click", () => {
+                location.href = "index.html#cart";
+            });
+        })();
+    </script>
+</body>
+</html>

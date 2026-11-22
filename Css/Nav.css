@@ -55,6 +55,28 @@ nav .nav-cart {
     transition: transform 160ms ease, opacity 160ms ease;
 }
 
+nav .nav-cart {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -0.2rem;
+    right: -0.35rem;
+    display: grid;
+    min-width: 1.35rem;
+    height: 1.35rem;
+    place-items: center;
+    padding: 0 0.25rem;
+    border: 2px solid var(--color-electric-blue);
+    border-radius: 999px;
+    background: #FFFFFF;
+    color: var(--color-electric-blue);
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
 nav .nav-cart svg {
     display: block;
     width: 1.8rem;

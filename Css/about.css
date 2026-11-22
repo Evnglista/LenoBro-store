@@ -71,6 +71,7 @@
     box-shadow: 0 16px 32px rgb(0 0 0 / 22%);
 }
 
+.about-mission-card h2,
 .about-mission-card h3,
 .about-feature-card h3 {
     margin: 0 0 0.65rem;
