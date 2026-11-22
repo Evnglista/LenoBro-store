@@ -16,6 +16,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="products.html">Products</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <button class="nav-cart" type="button" aria-label="Shopping cart">
@@ -411,13 +412,7 @@
             panel.querySelector(".cart-buy").addEventListener("click", () => {
                 const cart = readCart();
                 if (!cart.length) return;
-                checkout.querySelector(".checkout-list").innerHTML = cart.map(item =>
-                    `<li><span>${item.name} × ${item.quantity}</span><strong>${currency.format(item.price * item.quantity)}</strong></li>`
-                ).join("");
-                const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-                checkout.querySelector(".checkout-total").textContent = `Final total: ${currency.format(total)}`;
-                checkout.classList.add("is-open");
-                overlay.classList.add("is-open");
+                window.location.href = "checkout.html";
             });
             checkout.querySelector(".cart-confirm-close").addEventListener("click", () => {
                 checkout.classList.remove("is-open");

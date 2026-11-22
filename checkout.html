@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | LenoBro</title>
+    <link rel="stylesheet" href="Css/Nav.css">
+    <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="Css/checkout.css">
+    <link rel="stylesheet" href="Css/footer.css">
+</head>
+<body>
+    <nav>
+        <span class="nav-brand">LenoBro</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-cart" type="button" aria-label="Return to cart">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L21 9H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10" cy="20" r="1" fill="currentColor"/>
+                <circle cx="18" cy="20" r="1" fill="currentColor"/>
+            </svg>
+            <span class="cart-count" aria-label="0 items">0</span>
+        </button>
+    </nav>
+
+    <main class="checkout-page">
+        <header class="checkout-heading">
+            <p>Secure checkout</p>
+            <h1>Complete Your Order</h1>
+        </header>
+
+        <div class="checkout-layout">
+            <form class="checkout-form" id="checkout-form">
+                <h2>Customer Information</h2>
+                <div class="checkout-fields">
+                    <div class="checkout-field">
+                        <label for="checkout-name">Full Name</label>
+                        <input id="checkout-name" name="name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="checkout-field">
+                        <label for="checkout-email">Email Address</label>
+                        <input id="checkout-email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="checkout-field">
+                        <label for="checkout-phone">Phone Number</label>
+                        <input id="checkout-phone" name="phone" type="tel" autocomplete="tel" required>
+                    </div>
+                    <div class="checkout-field">
+                        <label for="checkout-payment">Payment Method</label>
+                        <select id="checkout-payment" name="payment" required>
+                            <option value="">Select payment method</option>
+                            <option>Cash on Delivery</option>
+                            <option>GCash</option>
+                            <option>Bank Transfer</option>
+                        </select>
+                    </div>
+                    <div class="checkout-field checkout-field-full">
+                        <label for="checkout-address">Delivery Address</label>
+                        <textarea id="checkout-address" name="address" autocomplete="street-address" required></textarea>
+                    </div>
+                </div>
+            </form>
+
+            <section class="checkout-summary" aria-labelledby="checkout-summary-title">
+                <h2 id="checkout-summary-title">Order Summary</h2>
+                <div class="checkout-items"></div>
+                <div class="checkout-total-row">
+                    <span>Total</span>
+                    <strong class="checkout-total">₱0</strong>
+                </div>
+                <button class="checkout-confirm" type="submit" form="checkout-form">Confirm Purchase</button>
+            </section>
+        </div>
+    </main>
+
+    <div class="checkout-success" role="status" aria-live="polite">
+        Thank you! Your order has been confirmed.
+    </div>
+
+    <footer class="contact-footer">
+        <p>© 2026 LenoBro™. All rights reserved.</p>
+    </footer>
+
+    <script>
+        (() => {
+            const currency = new Intl.NumberFormat("en-PH", {
+                style: "currency",
+                currency: "PHP",
+                maximumFractionDigits: 0
+            });
+
+            const readCart = () => {
+                try {
+                    return JSON.parse(localStorage.getItem("lenobro-cart") || "[]");
+                } catch {
+                    return [];
+                }
+            };
+
+            let cart = readCart();
+            const cartCount = document.querySelector(".cart-count");
+            const itemsContainer = document.querySelector(".checkout-items");
+            const totalElement = document.querySelector(".checkout-total");
+            const confirmButton = document.querySelector(".checkout-confirm");
+            const form = document.querySelector("#checkout-form");
+
+            const renderCheckout = () => {
+                const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+                const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                cartCount.textContent = itemCount;
+                cartCount.setAttribute("aria-label", `${itemCount} items`);
+                totalElement.textContent = currency.format(total);
+                confirmButton.disabled = cart.length === 0;
+
+                itemsContainer.innerHTML = cart.length
+                    ? cart.map(item => `
+                        <article class="checkout-item">
+                            <img src="${item.image}" alt="">
+                            <div>
+                                <p class="checkout-item-name">${item.name}</p>
+                                <p class="checkout-item-meta">${item.quantity} × ${currency.format(item.price)}</p>
+                            </div>
+                            <strong class="checkout-item-subtotal">${currency.format(item.price * item.quantity)}</strong>
+                        </article>
+                    `).join("")
+                    : '<p class="checkout-empty">Your cart is empty. <a href="products.html">Browse products</a></p>';
+            };
+
+            document.querySelector(".nav-cart").addEventListener("click", () => {
+                window.location.href = "index.html#cart";
+            });
+
+            form.addEventListener("submit", event => {
+                event.preventDefault();
+                if (!cart.length) return;
+
+                localStorage.removeItem("lenobro-cart");
+                cart = [];
+                renderCheckout();
+                const success = document.querySelector(".checkout-success");
+                success.classList.add("is-visible");
+                form.reset();
+                window.setTimeout(() => success.classList.remove("is-visible"), 3000);
+            });
+
+            renderCheckout();
+        })();
+    </script>
+</body>
+</html>

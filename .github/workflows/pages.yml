@@ -29,7 +29,7 @@ jobs:
       - name: Prepare site files
         run: |
           mkdir site
-          cp index.html site/
+          cp ./*.html site/
           cp -R Css images site/
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
