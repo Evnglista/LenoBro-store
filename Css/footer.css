@@ -8,9 +8,216 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .contact-footer p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+html.members-open {
+    overflow: hidden;
+}
+
+.footer-members-toggle {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.footer-members-toggle svg {
+    width: 1.45rem;
+    height: 1.45rem;
+}
+
+.footer-members-toggle:hover {
+    transform: translateY(-2px);
+    background: rgb(255 255 255 / 16%);
+}
+
+.footer-members-toggle:focus-visible,
+.members-close:focus-visible {
+    outline: 3px solid #FFFFFF;
+    outline-offset: 3px;
+}
+
+.members-overlay {
+    position: fixed;
+    z-index: 1100;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgb(6 16 34 / 72%);
+    opacity: 0;
+    transition: opacity 180ms ease;
+}
+
+.members-overlay[hidden] {
+    display: none;
+}
+
+.members-overlay.is-open {
+    opacity: 1;
+}
+
+.members-dialog {
+    width: min(100%, 30rem);
+    max-height: min(90vh, 42rem);
+    overflow-y: auto;
+    padding: clamp(1.25rem, 5vw, 2rem);
+    border: 1px solid rgb(37 99 235 / 14%);
+    border-radius: 1.25rem;
+    background: #FFFFFF;
+    color: var(--color-midnight-navy);
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 28%);
+    transform: translateY(0.75rem) scale(0.98);
+    transition: transform 180ms ease;
+}
+
+.members-overlay.is-open .members-dialog {
+    transform: translateY(0) scale(1);
+}
+
+.members-dialog-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.members-dialog-eyebrow {
+    margin-bottom: 0.35rem;
+    color: var(--color-electric-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.members-dialog h2 {
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
+    line-height: 1.2;
+}
+
+.members-close {
+    flex: 0 0 auto;
+    display: grid;
+    width: 2.4rem;
+    height: 2.4rem;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-cool-white);
+    color: var(--color-midnight-navy);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.members-close:hover {
+    background: var(--color-electric-blue);
+    color: #FFFFFF;
+}
+
+.members-close:focus-visible {
+    outline-color: var(--color-electric-blue);
+}
+
+.members-course {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.members-course-card {
+    padding: 0.9rem 1rem;
+    border-radius: 0.75rem;
+    background: var(--color-cool-white);
+}
+
+.members-course-card span {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #526078;
+    font-size: 0.75rem;
+}
+
+.members-course-card strong {
+    font-size: 0.95rem;
+}
+
+.members-list-title {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.members-list {
+    display: grid;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: member;
+}
+
+.members-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 3rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #E5EAF2;
+    border-radius: 0.7rem;
+    font-size: 0.92rem;
+    counter-increment: member;
+}
+
+.members-list li::before {
+    content: counter(member, decimal-leading-zero);
+    display: grid;
+    width: 1.8rem;
+    height: 1.8rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    background: rgb(37 99 235 / 10%);
+    color: var(--color-electric-blue);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+@media (max-width: 420px) {
+    .contact-footer {
+        gap: 0.5rem;
+    }
+
+    .contact-footer p {
+        font-size: 0.78rem;
+    }
+
+    .members-course {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-members-toggle,
+    .members-overlay,
+    .members-dialog,
+    .members-close {
+        transition: none;
+    }
 }

@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir site
           cp ./*.html site/
-          cp -R Css images site/
+          cp -R Css images Js site/
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
